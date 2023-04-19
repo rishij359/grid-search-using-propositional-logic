@@ -1,3 +1,12 @@
 # Logical Agent for Landmine World: Finding Gold using Propositional Logic and SAT Solver
 
-##
+## Problem statement
+
+The figure above shows a Land mine world containing several land mines. There is an agent in room [1,1]. The goal of the agent is to find the location of gold in the Land mine world. The agent “knows” that gold is present in a room if and only if the room has four adjacent rooms each having a landmine (see the figure above). So, gold cannot be present in any of the rooms along the boundary of the Land mine world. The agent is able to detect a land mine from the rooms that are adjacent to the room containing the land mine. There are four possible percepts that the agent can have: 0, 1, 2 and 3. The percept n means that n number of adjacent rooms have a land mine. (A percept value of 4 will not be possible because the agent will not be able to reach such a room.) In the figure shown above, if the agent is in room [2,1], then it will perceive 1. If the agent is in room [3,2], then the percept will be 2. In room [1,3], the percept will be 0.
+
+## Discription of the solution
+The project implemented a logical agent that uses propositional logic sentences to check which rooms are safe in a Landmine world. The agent is equipped with a SAT solver python-sat to infer the location of gold. The agent can only detect landmines from adjacent rooms and knows that gold is present in a room if and only if the room has four adjacent rooms each having a landmine.
+
+The agent moves from one room to an adjacent room using breadth-first search to find the shortest path through the previously visited safe rooms. The agent only needs to find the location of the room that contains gold. If the agent is unable to infer the location of gold after visiting all the safe rooms, the output is that Gold could not be detected after visiting all the safe rooms.
+
+The program uses Glucose3 class from the pysat.solvers library to represent positive and negative literals. The code has been thoroughly tested for different minefield world configurations and edge cases. The project provided hands-on experience in implementing a logical agent using propositional logic sentences and SAT solver python-sat to solve real-world problems.
