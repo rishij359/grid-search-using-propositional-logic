@@ -2,7 +2,7 @@
 
 ## Problem statement
 
-![Example Grid](img\Grid.png)
+!(img\Grid.png)
 The figure above shows a Land mine world containing several land mines. There is an agent in room [1,1]. The goal of the agent is to find the location of gold in the Land mine world. The agent “knows” that gold is present in a room if and only if the room has four adjacent rooms each having a landmine (see the figure above). So, gold cannot be present in any of the rooms along the boundary of the Land mine world. The agent is able to detect a land mine from the rooms that are adjacent to the room containing the land mine. There are four possible percepts that the agent can have: 0, 1, 2 and 3. The percept n means that n number of adjacent rooms have a land mine. (A percept value of 4 will not be possible because the agent will not be able to reach such a room.) In the figure shown above, if the agent is in room [2,1], then it will perceive 1. If the agent is in room [3,2], then the percept will be 2. In room [1,3], the percept will be 0. The agent only needs to find the location of the room that contains gold. It is possible that after visiting all the “safe” rooms agent is unable to infer the location of gold. So, the two possible outputs of your program will be:
 1. Gold is present in room [x,y].
 2. Gold could not be detected after visting all the safe rooms.
